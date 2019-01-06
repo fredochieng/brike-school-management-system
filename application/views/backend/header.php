@@ -25,9 +25,6 @@
 		<ul class="list-inline links-list pull-right">
 
 		<li class="dropdown language-selector">
-			<a href="<?php echo site_url('home');?>" target="_blank">
-				<i class="entypo-globe"></i> Website
-			</a>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
                         	<i class="entypo-user"></i>
 													<?php
