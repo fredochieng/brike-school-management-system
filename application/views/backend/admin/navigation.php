@@ -34,7 +34,7 @@
   						<i class="entypo-search"></i>
   					</button>
   				</form>
-			  </li>
+		</li>
 
         <!-- DASHBOARD -->
         <li class="<?php if ($page_name == 'dashboard') echo 'active'; ?> ">
@@ -47,7 +47,7 @@
         <!-- ADMINS -->
         <li class="<?php if ($page_name == 'admin') echo 'active'; ?> ">
             <a href="<?php echo site_url('admin/admin'); ?>">
-                <i class="fa fa-user-secret"></i>
+                <i class="entypo-user"></i>
                 <span><?php echo get_phrase('admin'); ?></span>
             </a>
         </li>
@@ -62,7 +62,7 @@
                                                 echo 'opened active has-sub';
         ?> ">
             <a href="#">
-                <i class="fa fa-group"></i>
+            <i class="entypo-users"></i>
                 <span><?php echo get_phrase('student'); ?></span>
             </a>
             <ul>
@@ -129,7 +129,8 @@
         <!-- LIBRARIAN -->
         <li class="<?php if ($page_name == 'librarian') echo 'active'; ?> ">
             <a href="<?php echo site_url('admin/librarian'); ?>">
-                <i class="fa fa-book"></i>
+                <!-- <i class="fa fa-book"></i> -->
+                <i class="entypo-book-open"></i>
                 <span><?php echo get_phrase('librarian'); ?></span>
             </a>
         </li>
@@ -161,7 +162,7 @@
                 </li>
                 <li class="<?php if ($page_name == 'section') echo 'active'; ?> ">
                     <a href="<?php echo site_url('admin/section'); ?>">
-                        <span><i class="entypo-dot"></i> <?php echo get_phrase('manage_sections'); ?></span>
+                        <span><i class="entypo-dot"></i> <?php echo get_phrase('manage_streams'); ?></span>
                     </a>
                 </li>
                 <li class="<?php if ($page_name == 'academic_syllabus') echo 'active'; ?> ">
@@ -294,7 +295,8 @@
         <!-- ONLINE EXAMS -->
         <li class="<?php if ($page_name == 'manage_online_exam' || $page_name == 'add_online_exam' || $page_name == 'edit_online_exam' || $page_name == 'manage_online_exam_question' || $page_name == 'update_online_exam_question' || $page_name == 'view_online_exam_results') echo 'opened active'; ?> ">
             <a href="#">
-                <i class="fa fa-feed"></i>
+                <!-- <i class="fa fa-feed"></i> -->
+                <i class="entypo-book-open"></i>
                 <span><?php echo get_phrase('online_exam'); ?></span>
             </a>
             <ul>
