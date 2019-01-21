@@ -11,8 +11,10 @@
 
                 <?php echo form_open(site_url('admin/student/create/') , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
 
-					<div class="form-group">
-						<label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('name');?></label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="middle_name" data-validate="required" placeholder="Enter Middle Name"
+                        data-message-required="<?php echo get_phrase('value_required'); ?>" value="" autofocus required>
+                </div>
 
 						<div class="col-sm-5">
 							<input type="text" class="form-control" name="name" data-validate="required" data-message-required="<?php echo get_phrase('value_required');?>" value="" autofocus required>
