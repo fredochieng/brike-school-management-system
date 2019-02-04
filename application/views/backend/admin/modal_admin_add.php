@@ -1,63 +1,86 @@
-<div class="row">
-	<div class="col-md-12">
-		<div class="panel panel-primary" data-collapsed="0">
-        	<div class="panel-heading">
-            	<div class="panel-title">
-            		<i class="entypo-plus-circled"></i>
-					<?php echo get_phrase('add_admin');?>
-            	</div>
+<div class="modal-header">
+    <h4 class="modal-title"><i class="entypo-user-add"></i><span>Add Admin</span></h4>
+</div>
+<div class="panel-body">
+    <?php echo form_open(site_url('admin/admin/create/'), array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data')); ?>
+    <div class="row">
+        <div class="col-md-5">
+
+            <div class="form-group">
+                <label for="field-1" class="control-label">
+                    <?php echo get_phrase('first_name'); ?></label>
+
+                <input type="text" class="form-control" name="name" data-validate="required" data-message-required="<?php echo get_phrase('value_required'); ?>"
+                    autofocus value="">
             </div>
-			<div class="panel-body">
 
-                <?php echo form_open(site_url('admin/admin/create/') , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
 
-					<div class="form-group">
-						<label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('name');?></label>
+            <div class="form-group">
+                <label for="field-1" class="control-label">
+                    <?php echo get_phrase('last_name'); ?></label>
 
-						<div class="col-sm-5">
-							<input type="text" class="form-control" name="name" data-validate="required" data-message-required="<?php echo get_phrase('value_required');?>"  autofocus
-                            	value="">
-						</div>
-					</div>
+                <input type="text" class="form-control" name="last_name" data-validate="required" data-message-required="<?php echo get_phrase('value_required'); ?>"
+                    autofocus value="">
+            </div>
 
-					<div class="form-group">
-						<label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('email').'/'.get_phrase('username');?></label>
-						<div class="col-sm-5">
-							<input type="text" class="form-control" name="email" value="" data-validate="required">
-						</div>
-					</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
 
-					<div class="form-group">
-						<label for="field-2" class="col-sm-3 control-label"><?php echo get_phrase('password');?></label>
+            <div class="form-group">
+                <label for="field-1" class="control-label">
+                    <?php echo get_phrase('email'); ?></label>
+                <input type="text" class="form-control" name="email" value="" data-validate="required">
+            </div>
 
-						<div class="col-sm-5">
-							<input type="password" class="form-control" name="password" value="" data-validate="required">
-						</div>
-					</div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
 
-					<div class="form-group">
-						<label for="field-2" class="col-sm-3 control-label"><?php echo get_phrase('phone');?></label>
+            <div class="form-group">
+                <label for="field-2" class="control-label">
+                    <?php echo get_phrase('phone'); ?></label>
 
-						<div class="col-sm-5">
-							<input type="text" class="form-control" name="phone" value="">
-						</div>
-					</div>
+                <input type="text" class="form-control" name="phone" value="" data-validate="required">
+            </div>
 
-					<div class="form-group">
-						<label for="field-2" class="col-sm-3 control-label"><?php echo get_phrase('address');?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
 
-						<div class="col-sm-5">
-							<textarea name="address" class = "form-control" rows="8" cols="80"></textarea>
-						</div>
-					</div>
+            <div class="form-group">
+                <label for="field-2" class="control-label">
+                    <?php echo get_phrase('address'); ?></label>
 
-                    <div class="form-group">
-						<div class="col-sm-offset-3 col-sm-5">
-							<button type="submit" class="btn btn-default"><?php echo get_phrase('add_admin');?></button>
-						</div>
-					</div>
-                <?php echo form_close();?>
+                <input type="text" class="form-control" name="address" value="">
+            </div>
+
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+
+            <div class="form-group">
+                <label for="field-2" class="control-label">
+                    <?php echo get_phrase('password'); ?></label>
+                <input type="password" class="form-control" name="password" value="" data-validate="required">
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-success btn-block">
+                        <?php echo get_phrase('add_admin'); ?></button>
+                </div>
             </div>
         </div>
+        <?php echo form_close(); ?>
     </div>
 </div>

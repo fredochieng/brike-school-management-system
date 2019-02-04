@@ -11,7 +11,7 @@
                             <th width="60"><div><?php echo get_phrase('teacher_id');?></div></th>
                             <th width="80"><div><?php echo get_phrase('photo');?></div></th>
                             <th><div><?php echo get_phrase('name');?></div></th>
-                            <th><div><?php echo get_phrase('email').'/'.get_phrase('username');?></div></th>
+                            <th><div><?php echo get_phrase('email_address');?></div></th>
                             <th><div><?php echo get_phrase('phone');?></div></th>
                             <th><div><?php echo get_phrase('options');?></div></th>
                         </tr>

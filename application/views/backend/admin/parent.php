@@ -1,19 +1,19 @@
 
-            <a href="javascript:;" onclick="showAjaxModal('<?php echo site_url('modal/popup/modal_parent_add/');?>');"
+            <a href="javascript:;" onclick="showAjaxModal('<?php echo site_url('modal/popup/modal_parent_add/'); ?>');"
                 class="btn btn-primary pull-right">
                 <i class="entypo-plus-circled"></i>
-                <?php echo get_phrase('add_new_parent');?>
+                <?php echo get_phrase('add_new_parent'); ?>
                 </a>
                 <br><br>
                <table class="table table-bordered" id="parents">
                     <thead>
                         <tr>
-                            <th width="60"><div><?php echo get_phrase('parent_id');?></div></th>
-                            <th><div><?php echo get_phrase('name');?></div></th>
-                            <th><div><?php echo get_phrase('email').'/'.get_phrase('username');?></div></th>
-                            <th><div><?php echo get_phrase('phone');?></div></th>
-                            <th><div><?php echo get_phrase('profession');?></div></th>
-                            <th><div><?php echo get_phrase('options');?></div></th>
+                            <th><div><?php echo get_phrase('name'); ?></div></th>
+                              <th><div><?php echo get_phrase('id_number'); ?></div></th>
+                            <th><div><?php echo get_phrase('email'); ?></div></th>
+                            <th><div><?php echo get_phrase('phone'); ?></div></th>
+                            <th><div><?php echo get_phrase('alt_phone'); ?></div></th>
+                            <th><div><?php echo get_phrase('options'); ?></div></th>
                         </tr>
                     </thead>
                 </table>
@@ -33,12 +33,12 @@
                 "dataType": "json",
                 "type": "POST",
             },
-            "columns": [
-                { "data": "parent_id" },
-                { "data": "name" },
+            "columns": [  
+                { "data": "first_name" },
+                { "data": "id_number" },
                 { "data": "email" },
                 { "data": "phone" },
-                { "data": "profession" },
+                { "data": "alt_phone" },
                 { "data": "options" },
             ],
             "columnDefs": [
@@ -51,11 +51,11 @@
     });
 
     function parent_edit_modal(parent_id) {
-        showAjaxModal('<?php echo site_url('modal/popup/modal_parent_edit/');?>' + parent_id);
+        showAjaxModal('<?php echo site_url('modal/popup/modal_parent_edit/'); ?>' + parent_id);
     }
 
     function parent_delete_confirm(parent_id) {
-        confirm_modal('<?php echo site_url('admin/parent/delete/');?>' + parent_id);
+        confirm_modal('<?php echo site_url('admin/parent/delete/'); ?>' + parent_id);
     }
 
 </script>
